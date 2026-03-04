@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a237e">
+<meta property="og:title" content="🩺 2026 중간고사 필승 - 41가지 유형 정밀 처방">
+<meta property="og:description" content="나의 공부 유형을 선택하면 맞춤 처방전이 생성됩니다. (학생/학부모용)">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sparta2603.github.io/student-41types/">
+<link rel="canonical" href="https://sparta2603.github.io/student-41types/">
 <title>🩺 2026 중간고사 필승 - 41가지 유형 정밀 처방</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
@@ -600,6 +606,279 @@ body {
 .report-contact .rc-item strong{ font-weight:900; }
 .report-contact a{ color:#ffffff; text-decoration:underline; }
 
+
+
+/* ============================
+   SHARE BOX (External access)
+   ============================ */
+.share-box{
+  background:white;
+  border:1px solid #e8eaf6;
+  border-radius:16px;
+  padding:14px 16px;
+  margin: -8px 0 18px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow:0 2px 10px rgba(0,0,0,.06);
+}
+.share-title{
+  font-size:12px;
+  font-weight:900;
+  color:#1a237e;
+  margin-bottom:6px;
+}
+.share-url{
+  font-size:12.5px;
+  font-weight:800;
+  color:#3949ab;
+  word-break:break-all;
+  background:#f0f2ff;
+  border:1px solid #dde1f0;
+  padding:8px 10px;
+  border-radius:12px;
+}
+.share-tip{
+  margin-top:6px;
+  font-size:11px;
+  color:#888;
+}
+.share-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+.btn-share{
+  border:none;
+  border-radius:12px;
+  padding:10px 14px;
+  font-size:12px;
+  font-weight:900;
+  cursor:pointer;
+  background:linear-gradient(135deg,#1a237e,#3949ab);
+  color:white;
+  font-family:'Noto Sans KR',sans-serif;
+}
+.btn-share.secondary{
+  background:white;
+  color:#3949ab;
+  border:1.5px solid #dde1f0;
+}
+.btn-share:hover{ opacity:.92; }
+
+/* ============================
+   CONTACT FLOATING
+   ============================ */
+.fab-contact{
+  position:fixed;
+  bottom:24px;
+  left:20px;
+  z-index:250;
+  border:none;
+  cursor:pointer;
+  border-radius:50px;
+  padding:12px 16px;
+  font-size:13px;
+  font-weight:900;
+  font-family:'Noto Sans KR',sans-serif;
+  color:white;
+  background:linear-gradient(135deg,#1565c0,#1e88e5);
+  box-shadow:0 10px 28px rgba(21,101,192,.35);
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.fab-contact:hover{ transform:translateY(-2px); }
+
+.contact-overlay{
+  display:none;
+  position:fixed; inset:0;
+  background:rgba(0,0,0,.65);
+  backdrop-filter:blur(6px);
+  z-index:700;
+  padding:18px;
+  overflow:auto;
+}
+.contact-overlay.active{ display:flex; align-items:flex-start; justify-content:center; padding-top:30px; }
+.contact-modal{
+  background:white;
+  border-radius:20px;
+  width:100%;
+  max-width:820px;
+  overflow:hidden;
+  box-shadow:0 22px 70px rgba(0,0,0,.35);
+}
+.contact-modal-top{
+  background:linear-gradient(135deg,#1a237e,#3949ab);
+  color:white;
+  padding:18px 18px 14px;
+  position:relative;
+}
+.contact-modal-top h3{ font-size:18px; font-weight:900; }
+.contact-modal-top p{ margin-top:6px; font-size:12px; opacity:.85; line-height:1.6; }
+.contact-close{
+  position:absolute; top:12px; right:12px;
+  width:36px; height:36px; border-radius:50%;
+  border:none;
+  background:rgba(255,255,255,.18);
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+}
+.contact-close:hover{ background:rgba(255,255,255,.28); }
+.contact-modal-body{ padding:16px; }
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:12px;
+}
+.contact-card{
+  background:#f8f9ff;
+  border:1px solid #e8eaf6;
+  border-radius:16px;
+  padding:14px;
+}
+.contact-card .ct{ font-size:13px; font-weight:900; color:#1a237e; margin-bottom:8px; line-height:1.35; }
+.contact-card .cl{ font-size:12px; color:#555; line-height:1.7; }
+.contact-card .ca{ margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; }
+.contact-card .ca button, .contact-card .ca a{
+  border:none;
+  border-radius:12px;
+  padding:9px 12px;
+  font-size:12px;
+  font-weight:900;
+  cursor:pointer;
+  font-family:'Noto Sans KR',sans-serif;
+}
+.btn-call{ background:linear-gradient(135deg,#2e7d32,#43a047); color:white; }
+.btn-sms{ background:linear-gradient(135deg,#e53935,#b71c1c); color:white; }
+.btn-copy{ background:white; border:1.5px solid #dde1f0; color:#3949ab; }
+.btn-copy:hover{ background:#f0f2ff; border-color:#3949ab; }
+
+@media(max-width:480px){
+  .fab-contact{ bottom:16px; left:14px; }
+  .share-box{ flex-direction:column; align-items:stretch; }
+  .share-actions{ justify-content:flex-start; }
+}
+
+
+
+
+/* ============================
+   STUDENT MODE: RESULT SHARE
+   ============================ */
+.result-panel{
+  background:linear-gradient(135deg,#ffffff,#f8f9ff);
+  border:1px solid #e8eaf6;
+  border-radius:16px;
+  padding:14px 16px;
+  margin:0 0 18px;
+  box-shadow:0 2px 10px rgba(0,0,0,.06);
+}
+.result-title{
+  font-size:12px;
+  font-weight:900;
+  color:#1a237e;
+  margin-bottom:6px;
+}
+.result-desc{
+  font-size:11.5px;
+  color:#666;
+  line-height:1.65;
+}
+.result-actions{
+  margin-top:10px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.btn-result{
+  border:none;
+  border-radius:12px;
+  padding:10px 14px;
+  font-size:12px;
+  font-weight:900;
+  cursor:pointer;
+  font-family:'Noto Sans KR',sans-serif;
+}
+.btn-result.primary{
+  background:linear-gradient(135deg,#2e7d32,#43a047);
+  color:white;
+}
+.btn-result.secondary{
+  background:white;
+  color:#3949ab;
+  border:1.5px solid #dde1f0;
+}
+.result-code{
+  margin-top:10px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+  font-size:11px;
+  padding:10px 12px;
+  background:#0f172a;
+  color:#e2e8f0;
+  border-radius:12px;
+  word-break:break-all;
+  display:none;
+}
+
+/* ============================
+   ACADEMY MODE: IMPORT PANEL
+   ============================ */
+.admin-panel{
+  background:linear-gradient(135deg,#fff8e1,#fff3cd);
+  border:1px solid #ffe082;
+  border-radius:16px;
+  padding:14px 16px;
+  margin:0 0 18px;
+}
+.admin-title{
+  font-size:12px;
+  font-weight:900;
+  color:#e65100;
+  margin-bottom:6px;
+}
+.admin-desc{
+  font-size:11.5px;
+  color:#666;
+  line-height:1.65;
+}
+.admin-row{
+  margin-top:10px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.admin-input{
+  flex:1;
+  min-width:240px;
+  border:1.5px solid #dde1f0;
+  border-radius:12px;
+  padding:10px 12px;
+  font-size:12px;
+  outline:none;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+}
+.admin-btn{
+  border:none;
+  border-radius:12px;
+  padding:10px 14px;
+  font-size:12px;
+  font-weight:900;
+  cursor:pointer;
+  font-family:'Noto Sans KR',sans-serif;
+  background:linear-gradient(135deg,#e53935,#b71c1c);
+  color:white;
+}
+.admin-btn.secondary{
+  background:white;
+  color:#b71c1c;
+  border:1.5px solid #f1b5b5;
+}
+
+
 /* ============================
    PRINT STYLES
    ============================ */
@@ -667,23 +946,23 @@ body {
 
 <!-- HEADER -->
 <div class="header">
-  <div class="header-badge">🩺 JUNGPA STUDY CAFE × AI STOOCARE</div>
+  <div class="header-badge">🩺 SPARTA 입시센터</div>
   <h1>2026 중간고사 필승<br><span>41가지 유형 정밀 처방</span></h1>
   <p class="header-sub">나의 공부 유형을 선택하면 맞춤 처방전이 생성됩니다</p>
   <div class="header-manager">
-    <span>⚙️ 관리 총괄</span>
-    <strong>신현태 팀장</strong>
+    <span>🏫</span>
+    <strong>스파르타입시센터</strong>
     <span>|</span>
-    <span>🏫 정파스터디카페</span>
+    <span>학습태도 진단 · 맞춤 처방</span>
   </div>
 </div>
 
 <!-- LEGEND -->
 <div class="legend">
-  <div class="legend-item"><div class="legend-dot" style="background:#1976d2"></div>책임 매니저 전략</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#c62828"></div>실시간 총무 관리</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#2e7d32"></div>주말 챌린저 훈련</div>
-  <div class="legend-item"><div class="legend-dot" style="background:#6a1b9a"></div>AI 스투케어 효율</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#1976d2"></div>전략 코칭</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#c62828"></div>실시간 점검</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#2e7d32"></div>주간/주말 챌린지</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#6a1b9a"></div>스파르타입시센터 효율</div>
 </div>
 
 <!-- STUDENT INFO PANEL -->
@@ -738,6 +1017,43 @@ body {
       ④ 버튼을 눌러 처방전을 확인하고 <strong>🖨️ 프린트</strong>하여 학생에게 전달하세요.</p>
     </div>
   </div>
+
+
+  <!-- SHARE (External access) -->
+  <div class="share-box" aria-label="외부 접속 공유">
+    <div class="share-left">
+      <div class="share-title">🔗 학생/학부모 접속 링크</div>
+      <div class="share-url" id="shareUrl">https://sparta2603.github.io/student-41types/</div>
+      <div class="share-tip">※ 모바일에서는 전화/문자 버튼이 바로 연결됩니다.</div>
+    </div>
+    <div class="share-actions">
+      <button class="btn-share" type="button" onclick="copyShareUrl()">📋 링크 복사</button>
+      <button class="btn-share secondary" type="button" onclick="openShareUrl()">🌐 새 창 열기</button>
+    </div>
+  </div>
+  <!-- RESULT PANEL (student mode) -->
+  <div class="result-panel" id="resultPanel">
+    <div class="result-title">✅ 진단 완료 후 학원에 결과 보내기</div>
+    <div class="result-desc">학생은 <strong>진단(유형 선택)</strong>만 진행합니다. 아래 버튼으로 <strong>결과코드</strong>를 복사해 학원(카톡/문자/DM)으로 보내주세요. 학원은 출력 모드에서 코드를 붙여넣고 프린트합니다.</div>
+    <div class="result-actions">
+      <button class="btn-result primary" type="button" onclick="makeResultCode()">📋 결과코드 만들기/복사</button>
+      <button class="btn-result secondary" type="button" onclick="toggleResultCode()">코드 보기</button>
+      <button class="btn-result secondary" type="button" onclick="openAcademyPrintLink()">학원 출력 링크</button>
+    </div>
+    <div class="result-code" id="resultCodeBox"></div>
+  </div>
+
+  <!-- ADMIN PANEL (academy print mode) -->
+  <div class="admin-panel" id="adminPanel" style="display:none;">
+    <div class="admin-title">🏫 학원 출력 모드 (관리자)</div>
+    <div class="admin-desc">학생이 보낸 <strong>결과코드</strong>를 아래에 붙여넣고 불러오면, 자동으로 유형이 선택되고 <strong>처방전 프린트</strong>가 가능합니다.</div>
+    <div class="admin-row">
+      <input class="admin-input" id="importCode" placeholder="여기에 결과코드를 붙여넣으세요"/>
+      <button class="admin-btn" type="button" onclick="importResultCode()">불러오기</button>
+      <button class="admin-btn secondary" type="button" onclick="clearSelections()">선택 초기화</button>
+    </div>
+  </div>
+
 
   <!-- SEARCH -->
   <div class="search-wrap">
@@ -801,19 +1117,19 @@ body {
     </div>
     <div class="rx-grid" id="rxGrid">
       <div class="rx-item">
-        <div class="rx-label"><div class="rx-icon">📌</div>[전략] 책임 매니저</div>
+        <div class="rx-label"><div class="rx-icon">📌</div>[전략] 스파르타입시센터</div>
         <div class="rx-text" id="rx1"></div>
       </div>
       <div class="rx-item">
-        <div class="rx-label"><div class="rx-icon">🔔</div>[관리] 실시간 총무</div>
+        <div class="rx-label"><div class="rx-icon">🔔</div>[관리] 스파르타입시센터</div>
         <div class="rx-text" id="rx2"></div>
       </div>
       <div class="rx-item">
-        <div class="rx-label"><div class="rx-icon">💪</div>[훈련] 주말 챌린저</div>
+        <div class="rx-label"><div class="rx-icon">💪</div>[훈련] 스파르타입시센터</div>
         <div class="rx-text" id="rx3"></div>
       </div>
       <div class="rx-item">
-        <div class="rx-label"><div class="rx-icon">🤖</div>[효율] AI 스투케어</div>
+        <div class="rx-label"><div class="rx-icon">🤖</div>[효율] 스파르타입시센터</div>
         <div class="rx-text" id="rx4"></div>
       </div>
     </div>
@@ -833,7 +1149,7 @@ body {
     <div class="report-container" id="reportContainer">
       <!-- REPORT TOP -->
       <div class="report-top">
-        <div class="report-logo">🩺 정파스터디카페 × AI 스투케어 | 2026 중간고사 필승</div>
+        <div class="report-logo">🩺 스파르타입시센터 | 2026 중간고사 필승</div>
         <div class="report-title">📋 나의 유형 맞춤 처방전</div>
         <div class="report-student-info">
           <div class="report-info-item">
@@ -870,14 +1186,121 @@ body {
 
       <!-- REPORT FOOTER -->
       <div class="report-footer">
-        🏫 정파스터디카페 &nbsp;|&nbsp; ⚙️ 관리 총괄: 신현태 팀장 &nbsp;|&nbsp; 🤖 AI 스투케어 프로그램 탑재<br>
-        <div class="report-contact">
-          <div class="rc-item"><strong>스파르타 영어수학 학원(종촌)</strong><br>☎ <a href="tel:0448665571">044-866-5571</a> · 평일 14~22시 / 토 09~15시 (문자 가능)</div>
-          <div class="rc-item"><strong>스파르타 영어수학 학원(새롬)</strong><br>☎ <a href="tel:01066765576">010-6676-5576</a> · 평일 14~22시 / 토 09~15시 (문자 가능)</div>
-          <div class="rc-item"><strong>정파 대입 스터디카페</strong><br>☎ <a href="tel:0447157744">044-715-7744</a> · 평일 18~22시<br>문자 <a href="sms:01076205571">010-7620-5571</a> (상시 가능)</div>
-          <div class="rc-item"><strong>AI 스투케어 세특관리</strong><br>☎/문자 <a href="tel:01094824132">010-9482-4132</a> · 평일 10~21시 (주말 문자 가능)</div>
+        <div style="font-weight:900;color:#1a237e; margin-bottom:6px;">🏫 스파르타입시센터 상담/문의</div>
+        <div class="contact-box" style="margin-top:10px;">
+          <div class="contact-item">
+            <div class="contact-title">스파르타 영어수학 학원(종촌)</div>
+            <div class="contact-line">전화/문자: <a href="tel:0448665571">044-866-5571</a></div>
+            <div class="contact-line">운영: 평일 14:00~22:00 / 토 09:00~15:00 (문자 가능)</div>
+            <div class="contact-actions">
+              <a href="tel:0448665571">전화하기</a>
+              <a href="sms:0448665571">문자하기</a>
+              <a href="#" onclick="copyText('044-866-5571'); return false;">번호 복사</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-title">스파르타 영어수학 학원(새롬)</div>
+            <div class="contact-line">전화/문자: <a href="tel:01066765576">010-6676-5576</a></div>
+            <div class="contact-line">운영: 평일 14:00~22:00 / 토 09:00~15:00 (문자 가능)</div>
+            <div class="contact-actions">
+              <a href="tel:01066765576">전화하기</a>
+              <a href="sms:01066765576">문자하기</a>
+              <a href="#" onclick="copyText('010-6676-5576'); return false;">번호 복사</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-title">스파르타입시센터 대입 스터디카페</div>
+            <div class="contact-line">대표전화: <a href="tel:0447157744">044-715-7744</a> (평일 18:00~22:00)</div>
+            <div class="contact-line">문자/전화: <a href="tel:01076205571">010-7620-5571</a> (상시 가능)</div>
+            <div class="contact-actions">
+              <a href="tel:0447157744">대표전화</a>
+              <a href="tel:01076205571">010 전화</a>
+              <a href="sms:01076205571">문자하기</a>
+              <a href="#" onclick="copyText('010-7620-5571'); return false;">번호 복사</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-title">스파르타입시센터 세특관리(AI)</div>
+            <div class="contact-line">전화/문자: <a href="tel:01094824132">010-9482-4132</a></div>
+            <div class="contact-line">운영: 평일 10:00~21:00 (주말 문자 가능)</div>
+            <div class="contact-actions">
+              <a href="tel:01094824132">전화하기</a>
+              <a href="sms:01094824132">문자하기</a>
+              <a href="#" onclick="copyText('010-9482-4132'); return false;">번호 복사</a>
+            </div>
+          </div>
         </div>
-        <span style="font-size:10px;color:#bbb;">© 2026 중간고사 필승 41가지 유형 정밀 처방 통합 가이드</span>
+
+        <div style="margin-top:10px; font-size:11px; color:#777; line-height:1.55;">
+          모바일에서는 <strong>전화/문자</strong> 버튼이 바로 연결됩니다. PC에서는 <strong>번호 복사</strong>를 눌러 사용하세요.
+        </div>
+        <div style="margin-top:10px; font-size:10px;color:#bbb;">© 2026 중간고사 필승 41가지 유형 정밀 처방 통합 가이드</div>
+      </div></div>
+  </div>
+</div>
+
+
+
+<!-- FLOATING CONTACT BUTTON -->
+<button class="fab-contact" id="fabContact" type="button" onclick="openContact()">☎️ 문의/전화·문자</button>
+
+<!-- CONTACT MODAL -->
+<div class="contact-overlay" id="contactOverlay">
+  <div class="contact-modal">
+    <div class="contact-modal-top">
+      <h3>☎️ 문의/상담 바로가기</h3>
+      <p>모바일에서는 <strong>전화/문자 버튼</strong>이 바로 연결됩니다. PC에서는 번호를 복사해 사용하세요.</p>
+      <button class="contact-close" type="button" onclick="closeContact()">✕</button>
+    </div>
+    <div class="contact-modal-body">
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="ct">스파르타 영어수학 학원 (종촌)</div>
+          <div class="cl">전화: <strong>044-866-5571</strong></div>
+          <div class="cl">평일 14:00~22:00 / 토 09:00~15:00 (문자 가능)</div>
+          <div class="ca">
+            <a class="btn-call" href="tel:0448665571">📞 전화</a>
+            <button class="btn-sms" type="button" onclick="openSMS('0448665571')">✉️ 문자</button>
+            <button class="btn-copy" type="button" onclick="copyText('044-866-5571')">번호 복사</button>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="ct">스파르타 영어수학 학원 (새롬)</div>
+          <div class="cl">전화/문자: <strong>010-6676-5576</strong></div>
+          <div class="cl">평일 14:00~22:00 / 토 09:00~15:00 (문자 가능)</div>
+          <div class="ca">
+            <a class="btn-call" href="tel:01066765576">📞 전화</a>
+            <button class="btn-sms" type="button" onclick="openSMS('01066765576')">✉️ 문자</button>
+            <button class="btn-copy" type="button" onclick="copyText('010-6676-5576')">번호 복사</button>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="ct">스파르타입시센터 대입 스터디카페</div>
+          <div class="cl">전화: <strong>044-715-7744</strong> (평일 18:00~22:00)</div>
+          <div class="cl">문자/전화: <a href="tel:01076205571"><strong>010-7620-5571</strong></a> (상시 가능)</div>
+          <div class="ca">
+            <a class="btn-call" href="tel:0447157744">📞 대표전화</a>
+            <a class="btn-call" href="tel:01076205571" style="background:linear-gradient(135deg,#1565c0,#0d47a1);">📞 010 전화</a>
+            <button class="btn-sms" type="button" onclick="openSMS('01076205571')">✉️ 문자</button>
+            <button class="btn-copy" type="button" onclick="copyText('010-7620-5571')">번호 복사</button>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="ct">스파르타입시센터 세특관리(AI)</div>
+          <div class="cl">전화/문자: <strong>010-9482-4132</strong></div>
+          <div class="cl">평일 10:00~21:00 (주말 문자 가능)</div>
+          <div class="ca">
+            <a class="btn-call" href="tel:01094824132">📞 전화</a>
+            <button class="btn-sms" type="button" onclick="openSMS('01094824132')">✉️ 문자</button>
+            <button class="btn-copy" type="button" onclick="copyText('010-9482-4132')">번호 복사</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -885,7 +1308,7 @@ body {
 
 <!-- SITE FOOTER -->
 <div class="site-footer">
-  <div>🏫 정파스터디카페 × 스파르타 영어·수학 학원 | 관리총괄: 신현태 팀장 | 🤖 AI 스투케어 탑재</div>
+  <div>🏫 스파르타입시센터 × 스파르타 영어·수학 학원</div>
 
   <div class="contact-box" aria-label="연락처 안내">
     <div class="contact-item">
@@ -910,17 +1333,18 @@ body {
     </div>
 
     <div class="contact-item">
-      <div class="contact-title">정파 대입 스터디카페</div>
+      <div class="contact-title">스파르타입시센터 대입 스터디카페</div>
       <div class="contact-line">전화: <a href="tel:0447157744">044-715-7744</a> (평일 18:00~22:00)</div>
-      <div class="contact-line">문자: <a href="sms:01076205571">010-7620-5571</a> (상시 가능)</div>
+      <div class="contact-line">문자/전화: <a href="tel:01076205571">010-7620-5571</a> (상시 가능)</div>
       <div class="contact-actions">
         <a href="tel:0447157744">전화하기</a>
+        <a href="tel:01076205571">010 전화</a>
         <a href="sms:01076205571">문자하기</a>
       </div>
     </div>
 
     <div class="contact-item">
-      <div class="contact-title">AI 스투케어 세특관리</div>
+      <div class="contact-title">스파르타입시센터 세특관리(AI)</div>
       <div class="contact-line">전화/문자: <a href="tel:01094824132">010-9482-4132</a></div>
       <div class="contact-line">운영: 평일 10:00~21:00</div>
       <div class="contact-line">주말 문자: 가능</div>
@@ -1029,7 +1453,7 @@ const types = [
     name:'주제탐구 막막형', subtitle:'검색 좀비형',
     symptom:'주제를 못 잡아 며칠씩 검색만 하며 시간 낭비하는 \'검색 좀비형\'',
     rx1:'진로와 교과 분석 후 3월 내 완료할 핵심 탐구 키워드 3개 확정 및 뼈대 제안',
-    rx2:'자료 서칭 20분 제한. 지연 시 AI 스투케어 사용 강제 지시 및 결과 확인',
+    rx2:'자료 서칭 20분 제한. 지연 시 스파르타입시센터 사용 강제 지시 및 결과 확인',
     rx3:'주제 고민 시간을 AI로 단축하여 국영수 실전 훈련 시간 2시간 추가 확보',
     rx4:'주제 선정부터 보고서 생성까지 AI로 해결하여 시간 80% 단축 및 매니저 첨삭' },
   { id:'14', part:2, partLabel:'PART 2 · 비교과 및 수행평가',
@@ -1084,7 +1508,7 @@ const types = [
   { id:'21', part:2, partLabel:'PART 2 · 비교과 및 수행평가',
     name:'에너지 고갈형', subtitle:'심각한 슬럼프',
     symptom:'방학 때 너무 달려 벌써 번아웃이 옴. 무기력하고 우울해하며 책만 봐도 토할 것 같은 상태',
-    rx1:'목표치를 70%로 조정하고 성취감 위주 과제 설계. 신현태 팀장과의 힐링 상담',
+    rx1:'목표치를 70%로 조정하고 성취감 위주 과제 설계. 스파르타입시센터과의 힐링 상담',
     rx2:'리프레시 존 이용 및 낮잠 15분 의무 부여. 학생의 표정과 활력 상시 기록 관리',
     rx3:'최소한의 핵심 과목 챌린지만 유지하는 \'저강도 훈련\'. 성적 유지보다 \'완주\'에 목표',
     rx4:'생기부 작업 시간을 제로화하여 비교과 스트레스 제거. 남은 에너지를 휴식과 지필에 투입' },
@@ -1136,7 +1560,7 @@ const types = [
     name:'세특 나열형', subtitle:'나열식 기록',
     symptom:'활동은 산더미인데 생기부에 적으면 알맹이가 없음. "무엇을 했다"만 있고 "나의 성장"은 없는 기록',
     rx1:'활동을 논리적 스토리로 꿰는 1:1 심화 코칭 및 핵심 키워드 선정. 결과물보다 \'탐구 과정의 고민\' 위주 계획',
-    rx2:'탐구 활동 후 핵심 키워드 5개를 즉시 AI 스투케어에 저장하도록 현장 지도. 활동 기록 누락 실시간 방지',
+    rx2:'탐구 활동 후 핵심 키워드 5개를 즉시 스파르타입시센터에 저장하도록 현장 지도. 활동 기록 누락 실시간 방지',
     rx3:'비교과 정리를 AI로 빠르게 끝내고, 남은 주말에 지필 오답에 집중하는 효율적 시간 분배 훈련',
     rx4:'AI 완성 후 비교과 매니저가 입학사정관 관점으로 최종 첨삭하여, 고교 수준을 뛰어넘는 통찰력 담긴 세특 완성' },
   { id:'29', part:3, partLabel:'PART 3 · 학원·전략·심화 케어',
@@ -1395,19 +1819,19 @@ function openReport() {
         </div>
         <div class="report-rx-grid">
           <div class="report-rx-item">
-            <div class="report-rx-label">📌 [전략] 책임 매니저</div>
+            <div class="report-rx-label">📌 [전략] 스파르타입시센터</div>
             <div class="report-rx-text">${t.rx1}</div>
           </div>
           <div class="report-rx-item">
-            <div class="report-rx-label">🔔 [관리] 실시간 총무</div>
+            <div class="report-rx-label">🔔 [관리] 스파르타입시센터</div>
             <div class="report-rx-text">${t.rx2}</div>
           </div>
           <div class="report-rx-item">
-            <div class="report-rx-label">💪 [훈련] 주말 챌린저</div>
+            <div class="report-rx-label">💪 [훈련] 스파르타입시센터</div>
             <div class="report-rx-text">${t.rx3}</div>
           </div>
           <div class="report-rx-item">
-            <div class="report-rx-label">🤖 [효율] AI 스투케어</div>
+            <div class="report-rx-label">🤖 [효율] 스파르타입시센터</div>
             <div class="report-rx-text">${t.rx4}</div>
           </div>
         </div>
@@ -1473,6 +1897,172 @@ document.addEventListener('keydown', e => {
   }
   if (document.getElementById('reportOverlay').classList.contains('active') && e.key === 'Escape') closeReport();
 });
+
+
+/* =====================
+   EXTERNAL SHARE / CONTACT
+   ===================== */
+function openShareUrl(){ window.open('https://sparta2603.github.io/student-41types/', '_blank'); }
+
+async function copyShareUrl(){
+  const url = 'https://sparta2603.github.io/student-41types/';
+  await copyText(url, '링크가 복사되었습니다.');
+}
+
+async function copyText(text, msg){
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      await navigator.clipboard.writeText(text);
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position='fixed'; ta.style.opacity='0';
+      document.body.appendChild(ta);
+      ta.focus(); ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+    if (msg) alert(msg);
+    else alert('복사되었습니다: ' + text);
+  } catch(e){
+    alert('복사에 실패했습니다. 직접 복사해 주세요: ' + text);
+  }
+}
+
+function openContact(){
+  document.getElementById('contactOverlay').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closeContact(){
+  document.getElementById('contactOverlay').classList.remove('active');
+  document.body.style.overflow='';
+}
+
+function openSMS(number){
+  // 모바일에선 sms: 스킴이 바로 실행, PC에선 실패할 수 있어 번호 복사를 안내
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if(!isMobile){
+    copyText(number, 'PC에서는 문자 앱을 열 수 없어 번호를 복사했습니다. 휴대폰에서 문자 보내기: ' + number);
+    return;
+  }
+  // iOS는 & 구분자를 쓰는 경우가 있어 기본 동작(본문 없음)으로 안정화
+  window.location.href = 'sms:' + number;
+}
+
+// overlay click close
+document.addEventListener('click', (e)=>{
+  const ov = document.getElementById('contactOverlay');
+  if(!ov) return;
+  if(ov.classList.contains('active') && e.target===ov){ closeContact(); }
+});
+
+
+/* =====================
+   MODE CONTROL (student/admin)
+   ===================== */
+function isAdminMode(){
+  const u = new URL(window.location.href);
+  return u.searchParams.get('admin') === '1';
+}
+
+function openAcademyPrintLink(){
+  window.open('https://sparta2603.github.io/student-41types/admin.html', '_blank');
+}
+
+function toggleResultCode(){
+  const box = document.getElementById('resultCodeBox');
+  if(!box) return;
+  const showing = box.style.display === 'block';
+  box.style.display = showing ? 'none' : 'block';
+}
+
+function _getStudentInfo(){
+  return {
+    name: (document.getElementById('studentName')?.value || '').trim(),
+    school: (document.getElementById('studentSchool')?.value || '').trim(),
+    grade: (document.getElementById('studentGrade')?.value || '').trim(),
+  };
+}
+
+function _selectedTypeIds(){
+  const ids = Array.from(selected).sort((a,b)=>a-b).map(i => types[i].id);
+  return ids;
+}
+
+function makeResultCode(){
+  if(selected.size===0){
+    alert('선택된 유형이 없습니다. 먼저 유형을 선택해 주세요.');
+    return;
+  }
+  const info=_getStudentInfo();
+  const payload={
+    v:1,
+    t:_selectedTypeIds(),
+    s:info,
+    ts: new Date().toISOString()
+  };
+  const json = JSON.stringify(payload);
+  // Base64 (utf-8 safe)
+  const b64 = btoa(unescape(encodeURIComponent(json)));
+  const code = 'S41:' + b64;
+  const box = document.getElementById('resultCodeBox');
+  box.textContent = code;
+  box.style.display='block';
+  copyText(code, '결과코드가 복사되었습니다. 학원(카톡/문자)으로 보내주세요.');
+}
+
+function importResultCode(){
+  const el=document.getElementById('importCode');
+  const raw=(el?.value||'').trim();
+  if(!raw){ alert('결과코드를 붙여넣어 주세요.'); return; }
+  if(!raw.startsWith('S41:')){ alert('코드 형식이 올바르지 않습니다. S41: 로 시작해야 합니다.'); return; }
+  try{
+    const b64 = raw.slice(4);
+    const json = decodeURIComponent(escape(atob(b64)));
+    const data = JSON.parse(json);
+    // restore student info
+    if(data.s){
+      if(document.getElementById('studentName')) document.getElementById('studentName').value = data.s.name || '';
+      if(document.getElementById('studentSchool')) document.getElementById('studentSchool').value = data.s.school || '';
+      if(document.getElementById('studentGrade')) document.getElementById('studentGrade').value = data.s.grade || '';
+    }
+    // clear and set selections
+    clearSelections();
+    const want = new Set((data.t||[]).map(String));
+    types.forEach((tp, i)=>{
+      if(want.has(String(tp.id))){
+        selected.add(i);
+        document.getElementById(`card-${i}`)?.classList.add('selected');
+      }
+    });
+    updateCountUI();
+    alert('불러오기 완료! 이제 “처방전 보기” → 프린트 하시면 됩니다.');
+  }catch(e){
+    alert('코드 해석에 실패했습니다. 코드가 중간에 잘렸는지 확인해 주세요.');
+  }
+}
+
+function applyModeUI(){
+  const admin = isAdminMode();
+  // show/hide panels
+  const adminPanel=document.getElementById('adminPanel');
+  if(adminPanel) adminPanel.style.display = admin ? '' : 'none';
+  const resultPanel=document.getElementById('resultPanel');
+  if(resultPanel) resultPanel.style.display = admin ? 'none' : '';
+
+  // In student mode: hide print button in report, but allow viewing for check
+  const printBtn = document.querySelector('.btn-print');
+  if(printBtn) printBtn.style.display = admin ? '' : 'none';
+
+  // Also update header badge to indicate mode
+  const badge = document.querySelector('.header-badge');
+  if(badge){
+    badge.textContent = admin ? '🏫 ACADEMY PRINT MODE · 스파르타입시센터 × SPARTA 입시센터' : '🧑‍🎓 STUDENT MODE · 스파르타입시센터 × SPARTA 입시센터';
+  }
+}
+
+
+applyModeUI();
 
 buildCards();
 </script>
